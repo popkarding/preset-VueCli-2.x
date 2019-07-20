@@ -7,6 +7,5 @@ import foo from './api/foo'
 
 // 导出接口
 export default {
-  foo,
-  //...
+  foo
 }

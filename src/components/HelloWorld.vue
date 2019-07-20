@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 @click="testHttp">{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -93,6 +93,12 @@ export default {
   },
   components: {
 
+  },
+  methods: {
+    testHttp () {
+      console.log('http!!!!')
+      this.$api.foo.fooGetOtherThing('000', {1: 1, 2: 2})
+    }
   }
 }
 </script>

@@ -3,7 +3,7 @@ export default {
     token: '',
   },
   mutations: {
-    changeState(state, payload) {
+    changeState (state, payload) {
       state.token = 'testcomittoken'
     },
   },

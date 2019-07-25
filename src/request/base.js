@@ -4,7 +4,8 @@
 
 const base = {
   serverRequest: 'https://xxxxxxxx.com/api/v1',
-  buildRequest: 'http://xxxxxxxx.com/api'
+  buildRequest: 'http://xxxxxxxx.com/api',
+  test: '/api'
 }
 
 export default base

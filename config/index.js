@@ -10,7 +10,17 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    // 本地跨域代理处理
+    proxyTable: {
+      // 用‘/api’开头，代理所有请求到目标服务器
+      '/api': {
+        target: 'http://jsonplaceholder.typicode.com', // 接口域名
+        changeOrigin: true, // 是否启用跨域
+        pathRewrite: { //此处理解成使用'/api'代替target里的地址,调用时:'/api/xxxx.xxx?foo=bar'
+          '^/api': ''
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

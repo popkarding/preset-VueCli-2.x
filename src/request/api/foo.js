@@ -8,7 +8,7 @@ import qs from 'qs' // 根据需求是否导入 node 里的 qs模块
 
 const foo = {
   fooGetSomeThing () {
-    return axios.get(`${base.serverRequest}/someInfo`)
+    return axios.get(`${base.test}`)
   },
   fooGetOtherThing (id, param) {
     return axios.get(`${base.serverRequest}/otherInfo/${id}`, {

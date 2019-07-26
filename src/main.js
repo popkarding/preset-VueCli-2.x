@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import api from './request/index'
+import './utils/rem'
 
 Vue.prototype.$api = api
 

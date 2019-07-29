@@ -9,7 +9,7 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     // 本地跨域代理处理
     proxyTable: {
       // 用‘/api’开头，代理所有请求到目标服务器

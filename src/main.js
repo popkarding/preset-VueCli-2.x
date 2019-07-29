@@ -7,6 +7,8 @@ import api from './request/index'
 import './utils/rem'
 import store from './store/index'
 
+import FastClick from 'fastclick' // fastclick引入及初始化，fix移动端点击300ms延迟问题
+FastClick.attach(document)
 Vue.prototype.$api = api
 
 Vue.config.productionTip = false

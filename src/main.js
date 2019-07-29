@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import api from './request/index'
 import './utils/rem'
+import store from './store/index'
 
 Vue.prototype.$api = api
 
@@ -14,6 +15,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

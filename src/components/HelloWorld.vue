@@ -2,6 +2,7 @@
   <div class="hello">
     <!-- <h1 >{{ msg }}</h1> -->
     <h2>Essential Links</h2>
+    <h2 style="color:red;" @click="testVuex">{{testToken}}</h2>
     <ul>
       <li>
         <a
@@ -84,6 +85,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'HelloWorld',
   data () {
@@ -94,10 +96,18 @@ export default {
   components: {
 
   },
+  computed: {
+    ...mapState({
+      testToken: state => state.moduleTest.token // modeuleUser
+    }),
+  },
   methods: {
     testHttp () {
       console.log('http!!!!')
       this.$api.foo.fooGetSomeThing('000', {1: 1, 2: 2})
+    },
+    testVuex () {
+      console.log('test Vuex')
     }
   }
 }

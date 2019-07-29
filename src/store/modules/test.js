@@ -1,10 +1,10 @@
 export default {
   state: {
-    token: '',
+    token: 'my token',
   },
   mutations: {
     changeState (state, payload) {
-      state.token = 'testcomittoken'
+      state.token = 'payload.test'
     },
   },
 }

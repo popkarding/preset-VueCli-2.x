@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <!-- <h1 >{{ msg }}</h1> -->
     <h2>Essential Links</h2>
+    <h2 style="color:red;" @click="testVuex">{{testToken}}</h2>
     <ul>
       <li>
         <a
@@ -45,7 +46,7 @@
         </a>
       </li>
     </ul>
-    <h2>Ecosystem</h2>
+    <h2 @click="testHttp">Ecosystem</h2>
     <ul>
       <li>
         <a
@@ -84,11 +85,29 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  components: {
+
+  },
+  computed: {
+    ...mapState({
+      testToken: state => state.moduleTest.token // modeuleUser
+    }),
+  },
+  methods: {
+    testHttp () {
+      console.log('http!!!!')
+      this.$api.foo.fooGetSomeThing('000', {1: 1, 2: 2})
+    },
+    testVuex () {
+      console.log('test Vuex')
     }
   }
 }

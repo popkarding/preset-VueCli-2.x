@@ -7,8 +7,8 @@ import fooRouter from './modules/fooRouter'
 Vue.use(Router)
 
 const router = new Router({
-  // base: '/test',
-  mode: 'history',
+  mode: 'hash',
+  // base: '/dist',
   routes: [
     // {
     //   path: '/',

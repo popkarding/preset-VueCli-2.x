@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img @click="onLoad" src="./assets/logo.png">
+    <!-- <img @click="onLoad" src="./assets/logo.png"> -->
     <router-view/>
   </div>
 </template>
@@ -24,5 +24,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  font-size: 20px;
 }
 </style>
